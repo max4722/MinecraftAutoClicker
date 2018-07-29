@@ -28,139 +28,273 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_start = new System.Windows.Forms.Button();
-            this.lbl_startText = new System.Windows.Forms.Label();
-            this.lblstart_time = new System.Windows.Forms.Label();
-            this.btn_stop = new System.Windows.Forms.Button();
-            this.lbl_delay = new System.Windows.Forms.Label();
-            this.txtDelay = new System.Windows.Forms.TextBox();
-            this.rdio_RightClick = new System.Windows.Forms.RadioButton();
-            this.rdio_LeftClick = new System.Windows.Forms.RadioButton();
-            this.chkHold = new System.Windows.Forms.CheckBox();
-            this.SuspendLayout();
-            // 
-            // btn_start
-            // 
-            this.btn_start.Location = new System.Drawing.Point(143, 133);
-            this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(88, 51);
-            this.btn_start.TabIndex = 0;
-            this.btn_start.Text = "START!";
-            this.btn_start.UseVisualStyleBackColor = true;
-            this.btn_start.Click += new System.EventHandler(this.btn_action_Click);
-            // 
-            // lbl_startText
-            // 
-            this.lbl_startText.AutoSize = true;
-            this.lbl_startText.Location = new System.Drawing.Point(11, 18);
-            this.lbl_startText.Name = "lbl_startText";
-            this.lbl_startText.Size = new System.Drawing.Size(85, 15);
-            this.lbl_startText.TabIndex = 1;
-            this.lbl_startText.Text = "Started Action:";
-            // 
-            // lblstart_time
-            // 
-            this.lblstart_time.AutoSize = true;
-            this.lblstart_time.Location = new System.Drawing.Point(103, 18);
-            this.lblstart_time.Name = "lblstart_time";
-            this.lblstart_time.Size = new System.Drawing.Size(0, 15);
-            this.lblstart_time.TabIndex = 2;
-            // 
-            // btn_stop
-            // 
-            this.btn_stop.Enabled = false;
-            this.btn_stop.Location = new System.Drawing.Point(44, 133);
-            this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(88, 51);
-            this.btn_stop.TabIndex = 3;
-            this.btn_stop.Text = "STOP!";
-            this.btn_stop.UseVisualStyleBackColor = true;
-            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
-            // 
-            // lbl_delay
-            // 
-            this.lbl_delay.AutoSize = true;
-            this.lbl_delay.Location = new System.Drawing.Point(31, 46);
-            this.lbl_delay.Name = "lbl_delay";
-            this.lbl_delay.Size = new System.Drawing.Size(72, 15);
-            this.lbl_delay.TabIndex = 4;
-            this.lbl_delay.Text = "Delay (ms): ";
-            // 
-            // txtDelay
-            // 
-            this.txtDelay.Location = new System.Drawing.Point(109, 43);
-            this.txtDelay.Name = "txtDelay";
-            this.txtDelay.Size = new System.Drawing.Size(70, 20);
-            this.txtDelay.TabIndex = 5;
-            this.txtDelay.Text = "300";
-            // 
-            // rdio_RightClick
-            // 
-            this.rdio_RightClick.AutoSize = true;
-            this.rdio_RightClick.Checked = true;
-            this.rdio_RightClick.Location = new System.Drawing.Point(49, 76);
-            this.rdio_RightClick.Name = "rdio_RightClick";
-            this.rdio_RightClick.Size = new System.Drawing.Size(83, 19);
-            this.rdio_RightClick.TabIndex = 6;
-            this.rdio_RightClick.TabStop = true;
-            this.rdio_RightClick.Text = "Right Click";
-            this.rdio_RightClick.UseVisualStyleBackColor = true;
-            // 
-            // rdio_LeftClick
-            // 
-            this.rdio_LeftClick.AutoSize = true;
-            this.rdio_LeftClick.Location = new System.Drawing.Point(138, 76);
-            this.rdio_LeftClick.Name = "rdio_LeftClick";
-            this.rdio_LeftClick.Size = new System.Drawing.Size(74, 19);
-            this.rdio_LeftClick.TabIndex = 7;
-            this.rdio_LeftClick.Text = "Left Click";
-            this.rdio_LeftClick.UseVisualStyleBackColor = true;
-            // 
-            // chkHold
-            // 
-            this.chkHold.AutoSize = true;
-            this.chkHold.Location = new System.Drawing.Point(27, 104);
-            this.chkHold.Name = "chkHold";
-            this.chkHold.Size = new System.Drawing.Size(224, 19);
-            this.chkHold.TabIndex = 8;
-            this.chkHold.Text = "Hold Click Button Down (For Mining)";
-            this.chkHold.UseVisualStyleBackColor = true;
-            // 
-            // Main
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 196);
-            this.Controls.Add(this.chkHold);
-            this.Controls.Add(this.rdio_LeftClick);
-            this.Controls.Add(this.rdio_RightClick);
-            this.Controls.Add(this.txtDelay);
-            this.Controls.Add(this.lbl_delay);
-            this.Controls.Add(this.btn_stop);
-            this.Controls.Add(this.lblstart_time);
-            this.Controls.Add(this.lbl_startText);
-            this.Controls.Add(this.btn_start);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Main";
-            this.Text = "Auto-Clicker";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.btn_start = new System.Windows.Forms.Button();
+			this.btn_stop = new System.Windows.Forms.Button();
+			this.rbtnRightClick = new System.Windows.Forms.RadioButton();
+			this.rbtnLeftClick = new System.Windows.Forms.RadioButton();
+			this.rbtnDelay = new System.Windows.Forms.RadioButton();
+			this.txtDelay = new System.Windows.Forms.NumericUpDown();
+			this.rbtnHold = new System.Windows.Forms.RadioButton();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.pnConfig = new System.Windows.Forms.Panel();
+			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.pnProcName = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtProcName = new System.Windows.Forms.TextBox();
+			this.lblstart_time = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.txtDelay)).BeginInit();
+			this.panel1.SuspendLayout();
+			this.panel2.SuspendLayout();
+			this.pnConfig.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+			this.splitContainer1.Panel1.SuspendLayout();
+			this.splitContainer1.Panel2.SuspendLayout();
+			this.splitContainer1.SuspendLayout();
+			this.pnProcName.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// btn_start
+			// 
+			this.btn_start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.btn_start.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btn_start.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(46)))));
+			this.btn_start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_start.Location = new System.Drawing.Point(0, 0);
+			this.btn_start.Name = "btn_start";
+			this.btn_start.Size = new System.Drawing.Size(120, 41);
+			this.btn_start.TabIndex = 0;
+			this.btn_start.Text = "START!";
+			this.btn_start.UseVisualStyleBackColor = false;
+			this.btn_start.Click += new System.EventHandler(this.btn_action_Click);
+			// 
+			// btn_stop
+			// 
+			this.btn_stop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.btn_stop.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btn_stop.Enabled = false;
+			this.btn_stop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(46)))));
+			this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_stop.Location = new System.Drawing.Point(0, 0);
+			this.btn_stop.Name = "btn_stop";
+			this.btn_stop.Size = new System.Drawing.Size(120, 41);
+			this.btn_stop.TabIndex = 3;
+			this.btn_stop.Text = "STOP!";
+			this.btn_stop.UseVisualStyleBackColor = false;
+			this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
+			// 
+			// rbtnRightClick
+			// 
+			this.rbtnRightClick.AutoSize = true;
+			this.rbtnRightClick.Checked = true;
+			this.rbtnRightClick.Location = new System.Drawing.Point(4, 3);
+			this.rbtnRightClick.Name = "rbtnRightClick";
+			this.rbtnRightClick.Size = new System.Drawing.Size(76, 17);
+			this.rbtnRightClick.TabIndex = 6;
+			this.rbtnRightClick.TabStop = true;
+			this.rbtnRightClick.Text = "Right Click";
+			this.rbtnRightClick.UseVisualStyleBackColor = true;
+			// 
+			// rbtnLeftClick
+			// 
+			this.rbtnLeftClick.AutoSize = true;
+			this.rbtnLeftClick.Location = new System.Drawing.Point(4, 26);
+			this.rbtnLeftClick.Name = "rbtnLeftClick";
+			this.rbtnLeftClick.Size = new System.Drawing.Size(69, 17);
+			this.rbtnLeftClick.TabIndex = 7;
+			this.rbtnLeftClick.Text = "Left Click";
+			this.rbtnLeftClick.UseVisualStyleBackColor = true;
+			// 
+			// rbtnDelay
+			// 
+			this.rbtnDelay.AutoSize = true;
+			this.rbtnDelay.Checked = true;
+			this.rbtnDelay.Location = new System.Drawing.Point(3, 3);
+			this.rbtnDelay.Name = "rbtnDelay";
+			this.rbtnDelay.Size = new System.Drawing.Size(77, 17);
+			this.rbtnDelay.TabIndex = 11;
+			this.rbtnDelay.TabStop = true;
+			this.rbtnDelay.Text = "Delay click";
+			this.rbtnDelay.UseVisualStyleBackColor = true;
+			// 
+			// txtDelay
+			// 
+			this.txtDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.txtDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtDelay.ForeColor = System.Drawing.Color.White;
+			this.txtDelay.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.txtDelay.Location = new System.Drawing.Point(86, 3);
+			this.txtDelay.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+			this.txtDelay.Name = "txtDelay";
+			this.txtDelay.Size = new System.Drawing.Size(68, 20);
+			this.txtDelay.TabIndex = 12;
+			this.txtDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.txtDelay.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+			// 
+			// rbtnHold
+			// 
+			this.rbtnHold.AutoSize = true;
+			this.rbtnHold.Location = new System.Drawing.Point(3, 26);
+			this.rbtnHold.Name = "rbtnHold";
+			this.rbtnHold.Size = new System.Drawing.Size(80, 17);
+			this.rbtnHold.TabIndex = 11;
+			this.rbtnHold.Text = "Hold button";
+			this.rbtnHold.UseVisualStyleBackColor = true;
+			// 
+			// panel1
+			// 
+			this.panel1.Controls.Add(this.rbtnDelay);
+			this.panel1.Controls.Add(this.txtDelay);
+			this.panel1.Controls.Add(this.rbtnHold);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(86, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(157, 53);
+			this.panel1.TabIndex = 13;
+			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.rbtnRightClick);
+			this.panel2.Controls.Add(this.rbtnLeftClick);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(86, 53);
+			this.panel2.TabIndex = 14;
+			// 
+			// pnConfig
+			// 
+			this.pnConfig.Controls.Add(this.panel1);
+			this.pnConfig.Controls.Add(this.panel2);
+			this.pnConfig.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnConfig.Location = new System.Drawing.Point(10, 68);
+			this.pnConfig.Name = "pnConfig";
+			this.pnConfig.Size = new System.Drawing.Size(243, 53);
+			this.pnConfig.TabIndex = 15;
+			// 
+			// splitContainer1
+			// 
+			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.splitContainer1.IsSplitterFixed = true;
+			this.splitContainer1.Location = new System.Drawing.Point(10, 144);
+			this.splitContainer1.Name = "splitContainer1";
+			// 
+			// splitContainer1.Panel1
+			// 
+			this.splitContainer1.Panel1.Controls.Add(this.btn_start);
+			// 
+			// splitContainer1.Panel2
+			// 
+			this.splitContainer1.Panel2.Controls.Add(this.btn_stop);
+			this.splitContainer1.Size = new System.Drawing.Size(243, 41);
+			this.splitContainer1.SplitterDistance = 120;
+			this.splitContainer1.SplitterWidth = 3;
+			this.splitContainer1.TabIndex = 8;
+			// 
+			// pnProcName
+			// 
+			this.pnProcName.Controls.Add(this.txtProcName);
+			this.pnProcName.Controls.Add(this.label1);
+			this.pnProcName.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnProcName.Location = new System.Drawing.Point(10, 10);
+			this.pnProcName.Name = "pnProcName";
+			this.pnProcName.Size = new System.Drawing.Size(243, 58);
+			this.pnProcName.TabIndex = 16;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(-3, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(77, 13);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "Process name:";
+			// 
+			// txtProcName
+			// 
+			this.txtProcName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.txtProcName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtProcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtProcName.ForeColor = System.Drawing.Color.White;
+			this.txtProcName.Location = new System.Drawing.Point(4, 16);
+			this.txtProcName.Name = "txtProcName";
+			this.txtProcName.Size = new System.Drawing.Size(236, 22);
+			this.txtProcName.TabIndex = 11;
+			this.txtProcName.Text = "javaw";
+			// 
+			// lblstart_time
+			// 
+			this.lblstart_time.AutoSize = true;
+			this.lblstart_time.Dock = System.Windows.Forms.DockStyle.Top;
+			this.lblstart_time.Location = new System.Drawing.Point(10, 121);
+			this.lblstart_time.Name = "lblstart_time";
+			this.lblstart_time.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+			this.lblstart_time.Size = new System.Drawing.Size(0, 23);
+			this.lblstart_time.TabIndex = 2;
+			// 
+			// Main
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+			this.ClientSize = new System.Drawing.Size(263, 198);
+			this.Controls.Add(this.splitContainer1);
+			this.Controls.Add(this.lblstart_time);
+			this.Controls.Add(this.pnConfig);
+			this.Controls.Add(this.pnProcName);
+			this.ForeColor = System.Drawing.Color.White;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
+			this.Name = "Main";
+			this.Padding = new System.Windows.Forms.Padding(10);
+			this.Text = "Auto-Clicker";
+			((System.ComponentModel.ISupportInitialize)(this.txtDelay)).EndInit();
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
+			this.pnConfig.ResumeLayout(false);
+			this.splitContainer1.Panel1.ResumeLayout(false);
+			this.splitContainer1.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+			this.splitContainer1.ResumeLayout(false);
+			this.pnProcName.ResumeLayout(false);
+			this.pnProcName.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btn_start;
-        private System.Windows.Forms.Label lbl_startText;
-        private System.Windows.Forms.Label lblstart_time;
         private System.Windows.Forms.Button btn_stop;
-        private System.Windows.Forms.Label lbl_delay;
-        private System.Windows.Forms.TextBox txtDelay;
-        private System.Windows.Forms.RadioButton rdio_RightClick;
-        private System.Windows.Forms.RadioButton rdio_LeftClick;
-        private System.Windows.Forms.CheckBox chkHold;
-    }
+        private System.Windows.Forms.RadioButton rbtnRightClick;
+        private System.Windows.Forms.RadioButton rbtnLeftClick;
+		private System.Windows.Forms.RadioButton rbtnDelay;
+		private System.Windows.Forms.NumericUpDown txtDelay;
+		private System.Windows.Forms.RadioButton rbtnHold;
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel pnConfig;
+		private System.Windows.Forms.SplitContainer splitContainer1;
+		private System.Windows.Forms.Panel pnProcName;
+		private System.Windows.Forms.TextBox txtProcName;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblstart_time;
+	}
 }
 

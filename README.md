@@ -1,10 +1,12 @@
-Minecraft Auto Clicker
+## Minecraft Auto Clicker
 
-* Be sure to go into options.txt in your .minecraft folder and set "pauseOnLostFocus" to "false"
-* Must be done with Minecraft closed
+#### Be sure to set `pauseOnLostFocus` to `false`!!
 
-To access your .minecraft folder, open explorer and paste this into the address bar:
-* %appdata%\\.minecraft
+You can do it by:
+* pressing <kbd>F3 + P</kbd> in game 
+* going into options.txt in your .minecraft folder and add or set `pauseOnLostFocus:false`
+  * Must be done with Minecraft closed
+  * To access your .minecraft folder, open explorer and paste this into the address bar: `%appdata%\\.minecraft`
 
 To Use:
 

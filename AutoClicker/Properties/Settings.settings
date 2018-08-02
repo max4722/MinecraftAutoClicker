@@ -1,7 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoClicker.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="last_button" Type="System.String" Scope="User">
+      <Value Profile="(Default)">right</Value>
+    </Setting>
+    <Setting Name="last_option" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hold</Value>
+    </Setting>
+    <Setting Name="last_delay" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="last_proc_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">javaw</Value>
+    </Setting>
+    <Setting Name="last_app_title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Minecraft</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

@@ -44,6 +44,8 @@
 			this.txtProcName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblstart_time = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtAppTitle = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.txtDelay)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -180,7 +182,7 @@
 			this.pnConfig.Controls.Add(this.panel1);
 			this.pnConfig.Controls.Add(this.panel2);
 			this.pnConfig.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnConfig.Location = new System.Drawing.Point(10, 68);
+			this.pnConfig.Location = new System.Drawing.Point(10, 102);
 			this.pnConfig.Name = "pnConfig";
 			this.pnConfig.Size = new System.Drawing.Size(243, 53);
 			this.pnConfig.TabIndex = 15;
@@ -189,7 +191,7 @@
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.splitContainer1.IsSplitterFixed = true;
-			this.splitContainer1.Location = new System.Drawing.Point(10, 144);
+			this.splitContainer1.Location = new System.Drawing.Point(10, 178);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
 			// splitContainer1.Panel1
@@ -206,12 +208,14 @@
 			// 
 			// pnProcName
 			// 
+			this.pnProcName.Controls.Add(this.txtAppTitle);
+			this.pnProcName.Controls.Add(this.label2);
 			this.pnProcName.Controls.Add(this.txtProcName);
 			this.pnProcName.Controls.Add(this.label1);
 			this.pnProcName.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnProcName.Location = new System.Drawing.Point(10, 10);
 			this.pnProcName.Name = "pnProcName";
-			this.pnProcName.Size = new System.Drawing.Size(243, 58);
+			this.pnProcName.Size = new System.Drawing.Size(243, 92);
 			this.pnProcName.TabIndex = 16;
 			// 
 			// txtProcName
@@ -239,18 +243,39 @@
 			// 
 			this.lblstart_time.AutoSize = true;
 			this.lblstart_time.Dock = System.Windows.Forms.DockStyle.Top;
-			this.lblstart_time.Location = new System.Drawing.Point(10, 121);
+			this.lblstart_time.Location = new System.Drawing.Point(10, 155);
 			this.lblstart_time.Name = "lblstart_time";
 			this.lblstart_time.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
 			this.lblstart_time.Size = new System.Drawing.Size(0, 23);
 			this.lblstart_time.TabIndex = 2;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(-3, 41);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(81, 13);
+			this.label2.TabIndex = 12;
+			this.label2.Text = "Application title:";
+			// 
+			// txtAppTitle
+			// 
+			this.txtAppTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.txtAppTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtAppTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtAppTitle.ForeColor = System.Drawing.Color.White;
+			this.txtAppTitle.Location = new System.Drawing.Point(3, 57);
+			this.txtAppTitle.Name = "txtAppTitle";
+			this.txtAppTitle.Size = new System.Drawing.Size(236, 22);
+			this.txtAppTitle.TabIndex = 13;
+			this.txtAppTitle.Text = "Minecraft";
 			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-			this.ClientSize = new System.Drawing.Size(263, 198);
+			this.ClientSize = new System.Drawing.Size(263, 231);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.lblstart_time);
 			this.Controls.Add(this.pnConfig);
@@ -298,6 +323,8 @@
 		private System.Windows.Forms.TextBox txtProcName;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblstart_time;
+		private System.Windows.Forms.TextBox txtAppTitle;
+		private System.Windows.Forms.Label label2;
 	}
 }
 

@@ -28,16 +28,52 @@ namespace AutoClicker
 		public Main()
 		{
 			InitializeComponent();
+			LoadSettings();
+		}
+
+		protected override void OnFormClosing(FormClosingEventArgs e)
+		{
+			base.OnFormClosing(e);
+			SaveSettings();
+		}
+
+		private void LoadSettings()
+		{
+			var s = Properties.Settings.Default;
+			rbtnRightClick.Checked = s.last_button == "right";
+			rbtnLeftClick.Checked = !rbtnRightClick.Checked;
+
+			rbtnDelay.Checked = s.last_option == "delay";
+			rbtnHold.Checked = !rbtnDelay.Checked;
+
+			txtDelay.Value = s.last_delay;
+
+			txtProcName.Text = s.last_proc_name;
+			txtAppTitle.Text = s.last_app_title;
+		}
+		private void SaveSettings()
+		{
+			var s = Properties.Settings.Default;
+
+			s.last_button = rbtnRightClick.Checked ? "right" : "left";
+			s.last_option = rbtnDelay.Checked ? "delay" : "hold";
+			s.last_delay = txtDelay.Value;
+			s.last_proc_name = txtProcName.Text;
+			s.last_app_title = txtAppTitle.Text;
+
+			s.Save();
 		}
 
 		private void btn_action_Click(object sender, EventArgs e)
 		{
-			var mcProcess = Process.GetProcessesByName(txtProcName.Text).FirstOrDefault();
+			var procName = txtProcName.Text;
+			var procTitle = txtAppTitle.Text;
+			var mcProcess = Process.GetProcessesByName(procName).FirstOrDefault();
 			var mainHandle = Handle;
 
-			if (mcProcess == null || !mcProcess.MainWindowTitle.Contains("Minecraft"))
+			if (mcProcess == null || !mcProcess.MainWindowTitle.Contains(procTitle))
 			{
-				MessageBox.Show(@"Minecraft not running!", @"Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($@"${procTitle} not running!", @"Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 

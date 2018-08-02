@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
 			this.btn_start = new System.Windows.Forms.Button();
 			this.btn_stop = new System.Windows.Forms.Button();
 			this.rbtnRightClick = new System.Windows.Forms.RadioButton();
@@ -40,8 +41,8 @@
 			this.pnConfig = new System.Windows.Forms.Panel();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.pnProcName = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.txtProcName = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.lblstart_time = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.txtDelay)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -213,15 +214,6 @@
 			this.pnProcName.Size = new System.Drawing.Size(243, 58);
 			this.pnProcName.TabIndex = 16;
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(-3, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(77, 13);
-			this.label1.TabIndex = 10;
-			this.label1.Text = "Process name:";
-			// 
 			// txtProcName
 			// 
 			this.txtProcName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -233,6 +225,15 @@
 			this.txtProcName.Size = new System.Drawing.Size(236, 22);
 			this.txtProcName.TabIndex = 11;
 			this.txtProcName.Text = "javaw";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(-3, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(77, 13);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "Process name:";
 			// 
 			// lblstart_time
 			// 
@@ -255,12 +256,14 @@
 			this.Controls.Add(this.pnConfig);
 			this.Controls.Add(this.pnProcName);
 			this.ForeColor = System.Drawing.Color.White;
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Main";
 			this.Padding = new System.Windows.Forms.Padding(10);
 			this.Text = "Auto-Clicker";
+			this.TopMost = true;
 			((System.ComponentModel.ISupportInitialize)(this.txtDelay)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
